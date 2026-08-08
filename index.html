@@ -441,6 +441,226 @@ footer a{color:#fff}
   margin:22px 0 8px auto;
   border-radius:3px;
 }
+  /* ===== تحسين الموقع للجوال ===== */
+@media (max-width: 600px){
+
+  html,body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+  }
+
+  .container{
+    width:92%;
+    max-width:100%;
+    margin:auto;
+  }
+
+  /* الشريط العلوي */
+  .navbar{
+    padding:10px 0;
+  }
+
+  .nav-inner{
+    width:94%;
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .navbar img{
+    max-width:120px;
+    height:auto;
+  }
+
+  .nav-links{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+
+  .nav-links a{
+    font-size:14px;
+    padding:5px 3px;
+    white-space:nowrap;
+  }
+
+  .call-btn{
+    display:none;
+  }
+
+  /* الرئيسية */
+  .hero{
+    padding:30px 0 25px;
+  }
+
+  .hero-image{
+    width:100%;
+    height:auto;
+    max-height:260px;
+    object-fit:cover;
+    border-radius:12px;
+  }
+
+  .hero-content{
+    padding:20px 5px;
+  }
+
+  .hero-content h1{
+    font-size:30px;
+    line-height:1.5;
+    margin:10px 0;
+  }
+
+  .hero-content h2{
+    font-size:20px;
+    line-height:1.7;
+  }
+
+  .hero-content p{
+    font-size:16px;
+    line-height:2;
+  }
+
+  /* الأزرار */
+  .actions{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    width:100%;
+  }
+
+  .btn{
+    width:100%;
+    box-sizing:border-box;
+    font-size:16px;
+    padding:13px 15px;
+  }
+
+  /* الأقسام */
+  .section{
+    padding:40px 0;
+  }
+
+  .section-title{
+    font-size:25px;
+    line-height:1.6;
+    margin-bottom:25px;
+  }
+
+  /* الخدمات */
+  .service-grid{
+    grid-template-columns:1fr !important;
+    gap:15px;
+  }
+
+  .service{
+    width:100%;
+    box-sizing:border-box;
+  }
+
+  /* النماذج */
+  .form-grid{
+    grid-template-columns:1fr !important;
+    gap:18px;
+  }
+
+  .form-card{
+    width:100%;
+    box-sizing:border-box;
+    padding:20px;
+  }
+
+  .form-card input,
+  .form-card select,
+  .form-card textarea{
+    width:100%;
+    box-sizing:border-box;
+    font-size:16px;
+  }
+
+  .form-card button{
+    width:100%;
+    font-size:16px;
+    padding:13px;
+  }
+
+  /* لماذا نحن */
+  .why-grid{
+    grid-template-columns:1fr !important;
+    gap:15px;
+  }
+
+  /* العقارات */
+  .property-grid{
+    grid-template-columns:1fr !important;
+    gap:18px;
+  }
+
+  .property-card{
+    width:100%;
+    box-sizing:border-box;
+  }
+
+  .property-card img{
+    width:100%;
+    height:auto;
+    object-fit:cover;
+  }
+
+  .property-body{
+    padding:18px;
+  }
+
+  .property-body h3{
+    font-size:21px;
+  }
+
+  .property-body p{
+    font-size:15px;
+    line-height:1.9;
+  }
+
+  .property-btn{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    text-align:center;
+    padding:12px;
+  }
+
+  /* مخططات شرق الرياض */
+  .projects{
+    padding:40px 0;
+  }
+
+  .projects p{
+    font-size:16px;
+    line-height:2;
+  }
+
+  /* الفوتر */
+  .footer-grid{
+    grid-template-columns:1fr !important;
+    gap:30px;
+    text-align:center;
+  }
+
+  footer{
+    padding:35px 0 80px;
+  }
+
+  /* زر واتساب */
+  .whatsapp{
+    width:55px;
+    height:55px;
+    right:15px;
+    bottom:15px;
+    font-size:25px;
+  }
+}
 </style>
 </head>
 
