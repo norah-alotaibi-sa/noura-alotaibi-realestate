@@ -754,6 +754,19 @@ footer a{color:#fff}
     object-fit:contain !important;
   margin-right:-15px !important;
 margin-left:-15px !important;
+}.property-submenu{
+    display:none;
+    margin-top:10px;
+}
+
+.property-submenu button{
+    display:block;
+    width:100%;
+    margin:8px 0;
+}
+
+.property-submenu.show{
+    display:block;
 }
 </style>
 </head>
@@ -841,11 +854,11 @@ src="IMG_5140.png"
         <input type="tel" placeholder="رقم الجوال">
 <div class="property-type">
   <!-- أرض -->
-  <button type="button"
-          class="main-property-btn"          onclick="togglePropertyMenu('landMenu')">
+<button type="button"
+    class="main-property-btn"
+    onclick="document.getElementById('landMenu').classList.toggle('show')">
     أرض ▼
-  </button>
-
+</button>
   <div id="landMenu" class="property-submenu">
     <button type="button"            onclick="chooseProperty('أرض سكنية','landMenu')">
       أرض سكنية
@@ -884,7 +897,7 @@ src="IMG_5140.png"
   <!-- عمارة -->
   <button type="button"
           class="main-property-btn"
-        onclick="togglePropertyMenu('buildingMenu')">
+onclick="document.getElementById('buildingMenu').classList.toggle('show')"
     عمارة ▼
   </button>
   <div id="buildingMenu" class="property-submenu">
