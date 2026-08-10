@@ -907,7 +907,40 @@ onclick="const f=this.parentElement;  v=f.querySelectorAll('input,select,textare
           إرسال العقار
         </button>
       </div>
+<div id="request" class="form-card">
+  <h3>اطلب عقارك</h3>
+  <p>أخبرنا عن طلبك وسنتواصل معك بأفضل الخيارات.</p>
+  <input type="text" placeholder="الاسم الكامل">
+  <input type="tel" placeholder="رقم الجوال">
+  <select>
+    <option>نوع العقار المطلوب</option>
+    <option>أرض</option>
+    <option>فيلا</option>
+    <option>شقة</option>
+    <option>عمارة</option>
+    <option>تجاري</option>
+  </select>
+  <input type="text" placeholder="المدينة">
+  <input type="text" placeholder="الحي">
+  <input type="text" placeholder="الميزانية المتوقعة">
+  <textarea placeholder="تفاصيل الطلب"></textarea>
+  <button type="button"
+  onclick="
+  const box=this.parentElement;
+  const fields=box.querySelectorAll('input,select,textarea');
+  const message='🏠 طلب عقار\n\nالاسم: '+fields[0].value+
+  '\nرقم الجوال: '+fields[1].value+
+  '\nنوع العقار: '+fields[2].value+
+  '\nالمدينة: '+fields[3].value+
+  '\nالحي: '+fields[4].value+
+  '\nالميزانية المتوقعة: '+fields[5].value+
+  '\nتفاصيل الطلب: '+fields[6].value;
+  window.open('https://wa.me/966501956365?text='+encodeURIComponent(message),'_blank')
+  ">
+    إرسال الطلب
+  </button>
 
+</div>
     </div>
   </div>
 </section>
