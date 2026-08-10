@@ -794,18 +794,14 @@ src="IMG_5140.png"
         نقدم خدمات متكاملة في بيع وشراء وتأجير وتسويق العقارات
         في الرياض، بكل ثقة ومصداقية.
       </p>
-
       <div class="license-badge" aria-label="ترخيص فال">
         <span>مرخصة من الهيئة العامة للعقار بموجب رخصة فال للوساطة والتسويق العقاري</span>
       </div>
-
       <div class="actions">
-  
       </div>
     </div>
   </div>
 </section>
-
 <!-- ===== الخدمات ===== -->
 <section id="services" class="section services">
   <div class="container">
@@ -817,19 +813,16 @@ src="IMG_5140.png"
         <h3>وساطة عقارية</h3>
         <p>نوفر أفضل الفرص العقارية ونسهل عمليات البيع والشراء.</p>
       </div>
-
       <div class="service">
         <div class="icon">🏠</div>
         <h3>شراء العقارات</h3>
         <p>نساعدك في إيجاد العقار المناسب بأفضل المواقع.</p>
       </div>
-
       <div class="service">
         <div class="icon">🔑</div>
         <h3>تأجير العقارات</h3>
         <p>نوفر خيارات متنوعة من العقارات السكنية والتجارية.</p>
       </div>
-
       <div class="service">
         <div class="icon">📣</div>
         <h3>تسويق العقارات</h3>
@@ -838,7 +831,6 @@ src="IMG_5140.png"
     </div>
   </div>
 </section>
-
 <!-- ===== اعرض عقارك واطلب عقارك ===== -->
 <section class="section forms">
   <div class="container">
@@ -849,52 +841,82 @@ src="IMG_5140.png"
         <input type="text" placeholder="الاسم الكامل">
         <input type="tel" placeholder="رقم الجوال">
 <div class="property-type">
-  <button type="button" onclick="toggleMenu('landMenu')">
+  <!-- أرض -->
+  <button type="button"
+          class="main-property-btn"          onclick="togglePropertyMenu('landMenu')">
     أرض ▼
   </button>
-<div id="landMenu" class="sub-menu">
- <button type="button" onclick="document.getElementById('propertyType').value='أرض سكنية'; toggleMenu('landMenu')">أرض سكنية</button>
-<button type="button" onclick="document.getElementById('propertyType').value='أرض تجارية'; toggleMenu('landMenu')">أرض تجارية</button>
-<button type="button" onclick="document.getElementById('propertyType').value='أرض تجاري سكني'; toggleMenu('landMenu')">أرض تجاري سكني</button>
-<button type="button" onclick="document.getElementById('propertyType').value='أرض زراعية'; toggleMenu('landMenu')">أرض زراعية</button> 
+
+  <div id="landMenu" class="property-submenu">
+    <button type="button"            onclick="chooseProperty('أرض سكنية','landMenu')">
+      أرض سكنية
+    </button>
+    <button type="button"
+          onclick="chooseProperty('أرض تجارية','landMenu')">
+      أرض تجارية
+    </button>
+    <button type="button"
+          onclick="chooseProperty('أرض تجاري سكني','landMenu')">
+      أرض تجاري سكني
+    </button>
+    <button type="button"            onclick="chooseProperty('أرض زراعية','landMenu')">
+      أرض زراعية
+    </button>
   </div>
- <input type="hidden" id="propertyType" value="">
-<button type="button"
-onclick="document.getElementById('propertyType').value='فيلا';">
-فيلا
-</button>
-<button type="button"
-onclick="document.getElementById('propertyType').value='دور';">
-دور
-</button>
-<button type="button"
-onclick="document.getElementById('propertyType').value='شقة';">
-شقة
-</button>
-<button type="button"
-onclick="document.getElementById('propertyType').value='تاون هاوس';">
-تاون هاوس
-</button>   <button type="button" onclick="toggleMenu('buildingMenu')">
+  <!-- العقارات السكنية -->
+  <button type="button"
+          class="main-property-btn"
+          onclick="chooseProperty('فيلا')">
+    فيلا
+  </button>
+  <button type="button"
+          class="main-property-btn"          onclick="chooseProperty('دور')">
+    دور
+  </button>
+  <button type="button"
+          class="main-property-btn"         onclick="chooseProperty('شقة')">
+    شقة
+  </button>
+  <button type="button"
+          class="main-property-btn"
+         onclick="chooseProperty('تاون هاوس')">
+    تاون هاوس
+  </button>
+  <!-- عمارة -->
+  <button type="button"
+          class="main-property-btn"
+        onclick="togglePropertyMenu('buildingMenu')">
     عمارة ▼
   </button>
-  <div id="buildingMenu" class="sub-menu">
-   <button type="button" onclick="document.getElementById('propertyType').value='عمارة سكنية'; toggleMenu('buildingMenu')">عمارة سكنية</button>
-<button type="button" onclick="document.getElementById('propertyType').value='عمارة تجارية'; toggleMenu('buildingMenu')">عمارة تجارية</button> 
+  <div id="buildingMenu" class="property-submenu">
+    <button type="button"
+        onclick="chooseProperty('عمارة سكنية','buildingMenu')">
+      عمارة سكنية
+    </button>
+    <button type="button"
+        onclick="chooseProperty('عمارة تجارية','buildingMenu')">
+      عمارة تجارية
+    </button>
   </div>
+  <!-- مستودع -->
+  <button type="button"
+          class="main-property-btn"          onclick="chooseProperty('مستودع')">
+    مستودع
+  </button>
+  <!-- استراحة -->
+  <button type="button"
+          class="main-property-btn"          onclick="chooseProperty('استراحة')">
+    استراحة
+  </button>
 </div>
-<button type="button"
-onclick="document.getElementById('propertyType').value='مستودع';">
-مستودع
-</button>
-<button type="button"
-onclick="document.getElementById('propertyType').value='استراحة';">
-استراحة
-</button>              
-              <input type="text" placeholder="المدينة">
+<!-- القيمة المختارة لنوع العقار -->
+<input type="hidden" id="propertyType" value="">
+<!-- المدينة -->
+<input type="text" placeholder="المدينة">
+<!-- الحي -->
 <input type="text" placeholder="الحي">
-        <textarea placeholder="تفاصيل العقار"></textarea>
-
-        <button type="button"
+<!-- تفاصيل العقار -->
+<textarea placeholder="تفاصيل العقار"></textarea>        <button type="button"
 onclick="const f=this.parentElement;  v=f.querySelectorAll('input,select,textarea'); const m='🏠 عرض عقارك\n\nالاسم: '+v[0].value+'\nرقم الجوال: '+v[1].value+'\nنوع العقار: '+v[2].value+'\nالمدينة: '+v[3].value+'\nالحي: '+v[4].value+'\nتفاصيل العقار: '+v[5].value; window.open('https://wa.me/966501956365?text='+encodeURIComponent(m),'_blank')" 
           إرسال العقار
         </button>
