@@ -858,9 +858,9 @@ src="IMG_5140.png"
           <option>عمارة</option>
           <option>تجاري</option>
         </select>
-        <input type="text" placeholder="المدينة / الحي">
-        <textarea placeholder="المواصفات أو الميزانية المتوقعة"></textarea>
-
+       <input type="text" placeholder="الحي"> 
+<input type="text" placeholder="الميزانية المتوقعة">
+<textarea placeholder="تفاصيل الطلب"></textarea>
        <button type="button"
 onclick="
 const box=this.parentElement;
@@ -870,9 +870,9 @@ const message=
 '\n\nالاسم: ' + fields[0].value +
 '\nرقم الجوال: ' + fields[1].value +
 '\nنوع العقار: ' + fields[2].value +
-'\nالحي / المدينة: ' + fields[3].value +
+'\nالحي: ' + fields[3].value +
 '\nالميزانية المتوقعة: ' + fields[4].value;
-
+'\nتفاصيل الطلب: ' + fields[5].value;
 window.open(
 'https://wa.me/966501956365?text=' + encodeURIComponent(message),
 '_blank'
