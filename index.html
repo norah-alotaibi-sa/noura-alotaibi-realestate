@@ -861,11 +861,25 @@ src="IMG_5140.png"
         <input type="text" placeholder="المدينة / الحي">
         <textarea placeholder="المواصفات أو الميزانية المتوقعة"></textarea>
 
-        <button type="button"
-onclick="window.open('https://wa.me/966501956365?text=السلام عليكم، أرغب في طلب عقار.%0A%0Aالاسم:%0Aرقم الجوال:%0Aنوع العقار:%0Aالحي:%0Aالميزانية المتوقعة:%0Aتفاصيل الطلب:')"
-          إرسال الطلب
-        </button>
-      </div>
+       <button type="button"
+onclick="
+const box=this.parentElement;
+const fields=box.querySelectorAll('input, select, textarea');
+const message=
+'السلام عليكم، أرغب في طلب عقار.' +
+'\n\nالاسم: ' + fields[0].value +
+'\nرقم الجوال: ' + fields[1].value +
+'\nنوع العقار: ' + fields[2].value +
+'\nالحي / المدينة: ' + fields[3].value +
+'\nالميزانية المتوقعة: ' + fields[4].value;
+
+window.open(
+'https://wa.me/966501956365?text=' + encodeURIComponent(message),
+'_blank'
+);
+">
+إرسال الطلب
+</button> 
 
       <div id="offer" class="form-card">
         <h3>اعرض عقارك</h3>
