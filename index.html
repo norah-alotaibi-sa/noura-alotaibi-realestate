@@ -846,18 +846,51 @@ src="IMG_5140.png"
             <div id="offer" class="form-card">
         <h3>اعرض عقارك</h3>
         <p>أرسل بيانات عقارك وسنتواصل معك لتسويقه باحترافية.</p>
-
         <input type="text" placeholder="الاسم الكامل">
         <input type="tel" placeholder="رقم الجوال">
-        <select>
-          <option>نوع العقار</option>
-          <option>أرض</option>
-          <option>فيلا</option>
-          <option>شقة</option>
-          <option>عمارة</option>
-          <option>تجاري</option>
-        </select>
-<input type="text" placeholder="المدينة">
+<div class="property-type">
+  <button type="button" onclick="toggleMenu('landMenu')">
+    أرض ▼
+  </button>
+<div id="landMenu" class="sub-menu">
+ <button type="button" onclick="document.getElementById('propertyType').value='أرض سكنية'; toggleMenu('landMenu')">أرض سكنية</button>
+<button type="button" onclick="document.getElementById('propertyType').value='أرض تجارية'; toggleMenu('landMenu')">أرض تجارية</button>
+<button type="button" onclick="document.getElementById('propertyType').value='أرض تجاري سكني'; toggleMenu('landMenu')">أرض تجاري سكني</button>
+<button type="button" onclick="document.getElementById('propertyType').value='أرض زراعية'; toggleMenu('landMenu')">أرض زراعية</button> 
+  </div>
+ <input type="hidden" id="propertyType" value="">
+<button type="button"
+onclick="document.getElementById('propertyType').value='فيلا';">
+فيلا
+</button>
+<button type="button"
+onclick="document.getElementById('propertyType').value='دور';">
+دور
+</button>
+<button type="button"
+onclick="document.getElementById('propertyType').value='شقة';">
+شقة
+</button>
+<button type="button"
+onclick="document.getElementById('propertyType').value='تاون هاوس';">
+تاون هاوس
+</button>   <button type="button" onclick="toggleMenu('buildingMenu')">
+    عمارة ▼
+  </button>
+  <div id="buildingMenu" class="sub-menu">
+   <button type="button" onclick="document.getElementById('propertyType').value='عمارة سكنية'; toggleMenu('buildingMenu')">عمارة سكنية</button>
+<button type="button" onclick="document.getElementById('propertyType').value='عمارة تجارية'; toggleMenu('buildingMenu')">عمارة تجارية</button> 
+  </div>
+</div>
+<button type="button"
+onclick="document.getElementById('propertyType').value='مستودع';">
+مستودع
+</button>
+<button type="button"
+onclick="document.getElementById('propertyType').value='استراحة';">
+استراحة
+</button>              
+              <input type="text" placeholder="المدينة">
 <input type="text" placeholder="الحي">
         <textarea placeholder="تفاصيل العقار"></textarea>
 
