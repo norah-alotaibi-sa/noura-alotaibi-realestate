@@ -914,7 +914,53 @@ font-size:12px;
 /* إزالة أي سهم أو تأثير ذهبي قديم */
 .property-submenu button::before{
     content:none !important;
+} 
+/* ===== إزالة الأزرار الذهبية من قائمة العقار ===== */
+
+.form-card .property-type .main-property-btn,
+.form-card .property-type .property-submenu button{
+    background:#fff !important;
+    background-color:#fff !important;
+    color:#0B3D91 !important;
+    border:none !important;
+    box-shadow:none !important;
+    border-radius:0 !important;
+    width:100% !important;
+    padding:10px !important;
+    margin:6px 0 !important;
+}
+
+/* سهم زر أرض */
+.form-card .property-type .main-property-btn::after{
+    content:none !important;
+}
+
+/* إزالة أي سهم ذهبي قديم */
+.form-card .property-type .property-submenu button::before{
+    content:none !important;
 }  
+ .main-property-btn,
+.property-submenu button,
+.property-type button,
+.property-dropdown-title{
+    background:transparent !important;
+    background-color:transparent !important;
+    color:#0B3D91 !important;
+    border:none !important;
+    box-shadow:none !important;
+}
+
+.main-property-btn:hover,
+.main-property-btn:focus,
+.main-property-btn:active,
+.property-submenu button:hover,
+.property-submenu button:focus,
+.property-submenu button:active{
+    background:transparent !important;
+    background-color:transparent !important;
+    color:#0B3D91 !important;
+    box-shadow:none !important;
+} 
 </style>
 </head>
 <body>
