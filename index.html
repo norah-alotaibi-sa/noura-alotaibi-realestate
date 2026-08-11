@@ -803,6 +803,46 @@ font-size:12px;
 
 .property-submenu.show{
     display:block;
+}/* ===== إلغاء الأزرار الذهبية وإظهار السهم فقط ===== */
+
+.main-property-btn{
+  background:transparent !important;
+  border:none !important;
+  color:#0B3D91 !important;
+  box-shadow:none !important;
+  border-radius:0 !important;
+  font-size:20px !important;
+  font-weight:bold !important;
+  padding:10px !important;
+}
+
+.property-submenu button{
+  display:block !important;
+  width:100% !important;
+  margin:6px 0 !important;
+  padding:10px 5px !important;
+  background:transparent !important;
+  border:none !important;
+  border-radius:0 !important;
+  color:#0B3D91 !important;
+  font-size:16px !important;
+  font-weight:bold !important;
+  cursor:pointer;
+  text-align:right !important;
+  box-shadow:none !important;
+}
+
+.property-submenu button:hover{
+  background:transparent !important;
+  color:#D4AF37 !important;
+}
+
+.property-submenu button::before{
+  content:none !important;
+}
+
+.property-submenu .property-dropdown-title{
+  display:none !important;
 }
 </style>
 </head>
