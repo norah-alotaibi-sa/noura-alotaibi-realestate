@@ -961,6 +961,45 @@ font-size:12px;
     color:#0B3D91 !important;
     box-shadow:none !important;
 } 
+  /* ===== ضبط قائمة العقارات ===== */
+.property-submenu{
+    display:none !important;
+    margin-top:10px;
+}
+
+.property-submenu.show{
+    display:block !important;
+}
+
+.property-submenu button{
+    display:block;
+    width:100%;
+    margin:6px 0;
+    padding:8px 5px;
+    background:transparent !important;
+    background-color:transparent !important;
+    color:#0B3D91 !important;
+    border:none !important;
+    box-shadow:none !important;
+    text-align:center;
+    cursor:pointer;
+}
+
+.property-submenu button:hover,
+.property-submenu button:focus,
+.property-submenu button:active{
+    background:transparent !important;
+    background-color:transparent !important;
+    color:#0B3D91 !important;
+    border:none !important;
+    box-shadow:none !important;
+}
+
+/* إزالة أي سهم أو محتوى ذهبي قديم */
+.form-card .property-type .main-property-btn::after,
+.form-card .property-type .property-submenu-title::after{
+    content:none !important;
+}
 </style>
 </head>
 <body>
