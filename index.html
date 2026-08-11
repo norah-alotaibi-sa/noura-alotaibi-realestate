@@ -843,7 +843,78 @@ font-size:12px;
 
 .property-submenu .property-dropdown-title{
   display:none !important;
+}/* ===== إلغاء جميع الأزرار الذهبية للقائمة العقارية ===== */
+
+.main-property-btn,
+.property-submenu button{
+    background:transparent !important;
+    border:none !important;
+    box-shadow:none !important;
+    border-radius:0 !important;
+    color:#0B3D91 !important;
+    font-weight:bold !important;
+    cursor:pointer;
 }
+
+/* سهم بجانب خيارات العقار */
+.property-submenu button::before{
+    content:"▼" !important;
+    color:#0B3D91 !important;
+    font-size:12px !important;
+    margin-left:8px !important;
+}
+.property-submenu button:hover,
+.property-submenu button:focus,
+.property-submenu button:active{
+    background:transparent !important;
+    color:#0B3D91 !important;
+    box-shadow:none !important;
+}
+
+.property-submenu button::before{
+    content:"▼" !important;
+    color:#0B3D91 !important;
+    font-size:12px !important;
+    margin-left:8px !important;
+}
+
+.main-property-btn::after{
+    content:"▼" !important;
+    color:#0B3D91 !important;
+    font-size:12px !important;
+    margin-right:8px !important;
+}
+/* السهم الرئيسي بجانب كلمة أرض */
+.main-property-btn{
+    color:#0B3D91 !important;
+    font-size:20px !important;
+}
+
+/* إزالة أي تأثير ذهبي عند الضغط أو المرور */
+.main-property-btn:hover,
+.property-submenu button:hover{
+    background:transparent !important;
+    color:#0B3D91 !important;
+}
+/* ===== إلغاء اللون الذهبي نهائياً لأزرار العقار ===== */
+
+.main-property-btn,
+.property-submenu button,
+.property-submenu button:hover,
+.property-submenu button:focus,
+.property-submenu button:active{
+    background:#fff !important;
+    background-color:#fff !important;
+    color:#0B3D91 !important;
+    border:none !important;
+    box-shadow:none !important;
+    border-radius:0 !important;
+}
+
+/* إزالة أي سهم أو تأثير ذهبي قديم */
+.property-submenu button::before{
+    content:none !important;
+}  
 </style>
 </head>
 <body>
