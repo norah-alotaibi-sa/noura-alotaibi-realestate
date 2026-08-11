@@ -760,11 +760,49 @@ margin-left:-15px !important;
 }
 .property-submenu.show{
     display:block;
-}
 .property-submenu button{
     display:block;
     width:100%;
-    margin:8px 0;
+    margin:6px 0;
+    padding:8px 5px;
+    background:transparent !important;
+    color:#0B3D91 !important;
+    border:none !important;
+    border-radius:0;
+    font-size:16px;
+    cursor:pointer;
+    text-align:right;
+}
+
+.property-submenu button::before{
+content:"▼";
+margin-left:6px;
+    color:#D4AF37;
+font-size:12px;
+  font-weight:bold;
+}
+  .property-dropdown-title{
+    background:transparent !important;
+    border:none !important;
+    color:#0B3D91 !important;
+    font-size:20px;
+    font-weight:bold;
+    width:100%;
+    padding:10px;
+    cursor:pointer;
+}
+
+.property-dropdown-title span{
+    font-size:16px;
+    margin-right:6px;
+}
+
+.property-submenu{
+    display:none;
+}
+
+.property-submenu.show{
+    display:block;
 }
 </style>
 </head>
@@ -857,12 +895,15 @@ src="IMG_5140.png"
     أرض ▼
 </button>
   <div id="landMenu" class="property-submenu">
-    <button type="button"            onclick="chooseProperty('أرض سكنية','landMenu')">
-      أرض سكنية
-    </button>
+    <button type="button"            onclick="chooseProperty('أرض سكنية','
     <button type="button"
-          onclick="chooseProperty('أرض تجارية','landMenu')">
-      أرض تجارية
+
+        class="property-dropdown-title"
+
+        onclick="document.getElementById('landMenu').classList.toggle('show')">
+    أرض <span>▼</span>
+
+</button>                                                         
     </button>
     <button type="button"
           onclick="chooseProperty('أرض تجاري سكني','landMenu')">
