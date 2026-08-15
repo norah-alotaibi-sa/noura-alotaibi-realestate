@@ -1051,12 +1051,13 @@ font-size:12px;
 .form-card .property-type .property-submenu-title::after{
     content:none !important;
 }/* توحيد حجم صور العقارات */
+/* توحيد عرض صور العقارات بدون ضغط أو قص */
 .property-card > img {
   width: 100%;
-  height: 160px;
+  height: auto;
   display: block;
-  object-fit: cover;
-  object-position: center;
+  object-fit: contain;
+}
 }
 </style>
 </head>
