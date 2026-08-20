@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://norah-alotaibi-sa.github.io/noura-alotaibi-realestate/sitemap.xml
